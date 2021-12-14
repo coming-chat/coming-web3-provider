@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
   The magic behind the dApps browsers
                        DESC
 
-  s.homepage         = 'https://github.com/Coming/ComingWeb3Provider'
+  s.homepage         = 'https://github.com/coming-chat/coming-web3-provider'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hewigovens' => 'hewigovens@gmail.com', 'Viktor Radchenko' => 'vikmeup' }
-  s.source           = { :git => 'https://github.com/Coming/ComingWeb3Provider.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/coming-chat/coming-web3-provider.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/Coming'
   s.ios.deployment_target = '8.0'
 
