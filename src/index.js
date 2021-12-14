@@ -15,7 +15,7 @@ let callbacks = {}
 let hookedSubProvider
 let globalSyncOptions = {}
 
-const Coming = {
+const ComingWallet = {
   init (rpcUrl, options, syncOptions) { 
     const engine = new ProviderEngine()
     const web3 = new Web3(engine)
@@ -48,7 +48,7 @@ const Coming = {
     engine.on('error', err => console.error(err.stack))
     engine.enable = options.enable
     engine.chainId = syncOptions.networkVersion
-    engine.isComing = true
+    engine.isComingWallet = true
     engine.start()
 
     return engine
@@ -77,8 +77,8 @@ const Coming = {
   }
 }
 
-if (typeof context.Coming === 'undefined') {
-  context.Coming = Coming
+if (typeof context.ComingWallet === 'undefined') {
+  context.ComingWallet = ComingWallet
 }
 
 ProviderEngine.prototype.setHost = function (host) {
@@ -192,4 +192,4 @@ ProviderEngine.prototype.request = function (payload) {
   })
 }
 
-module.exports = Coming
+module.exports = ComingWallet

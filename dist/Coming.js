@@ -63600,7 +63600,7 @@ var callbacks = {};
 var hookedSubProvider = void 0;
 var globalSyncOptions = {};
 
-var Coming = {
+var ComingWallet = {
   init: function init(rpcUrl, options, syncOptions) {
     var engine = new ProviderEngine();
     var web3 = new Web3(engine);
@@ -63641,7 +63641,7 @@ var Coming = {
     });
     engine.enable = options.enable;
     engine.chainId = syncOptions.networkVersion;
-    engine.isComing = true;
+    engine.isComingWallet = true;
     engine.start();
 
     return engine;
@@ -63670,8 +63670,8 @@ var Coming = {
   }
 };
 
-if (typeof context.Coming === 'undefined') {
-  context.Coming = Coming;
+if (typeof context.ComingWallet === 'undefined') {
+  context.ComingWallet = ComingWallet;
 }
 
 ProviderEngine.prototype.setHost = function (host) {
@@ -63789,7 +63789,7 @@ ProviderEngine.prototype.request = function (payload) {
   });
 };
 
-module.exports = Coming;
+module.exports = ComingWallet;
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"web3":364,"web3-provider-engine":350,"web3-provider-engine/subproviders/cache.js":351,"web3-provider-engine/subproviders/filters.js":352,"web3-provider-engine/subproviders/hooked-wallet.js":353,"web3-provider-engine/subproviders/provider.js":354,"web3-provider-engine/subproviders/subscriptions.js":356}]},{},[416]);
