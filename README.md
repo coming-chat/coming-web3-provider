@@ -5,7 +5,7 @@
 If Coming provider injected properly `isComing` will be `true`
 
 ```javascript
- web3.currentProvider.isComing
+ web3.currentProvider.isComingWallet
 ```
 
 ## License
